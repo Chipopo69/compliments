@@ -1,0 +1,155 @@
+﻿
+        html
+        <!DOCTYPE html >
+        <html >
+        <head >
+        <style >
+        /* CSS for heart design */
+        .heart {
+            animation: beat 1s infinite alternate;
+            color: red;
+            font-size: 30px;
+        }
+
+        /* Keyframes for heartbeat animation */
+        @keyframes beat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* CSS for button and compliment display */
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .compliment {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Random Compliment Generator</h2>
+        <div class="compliment" id="compliment">Press the button to receive a random compliment!</div>
+        <button class="button" onclick="generateCompliment()">Generate Compliment</button>
+    </div>
+
+    <script>// Array of compliments
+        var compliments = [
+            "I am so happy that our paths crossed and we met each other.",
+            "There's no way that an extremely cute girl like you exists in this world. But here you are!",
+            "Your creativity and artistic ability just blow my mind.",
+            "You make a huge difference in the lives of those around you.",
+            "Spending time with you is a lifetime enjoyment.",
+            "Our friendship is like a special cup of tea. It is made with a special blend of you and me.",
+            "You look stunning in whatever you wear.",
+            "The sound of your laughter makes me feel like I just won a million-dollar lottery.",
+            "I'm charmed by your beauty and sense of humor.",
+            "You are full of confidence and positivity.",
+            "Thank you for never getting tired of me. You are a true friend.",
+            "Pictures don't do justice to your looks.",
+            "I'm fascinated by your lips because they always say the most amazing things with a bright and beautiful smile.",
+            "I enjoy your unique mindset.",
+            "You are the first person to strike my mind every morning.",
+            "Chocolate is sweet, but your friendship is sweeter.",
+            "You are a natural beauty.",
+            "I feel like I'm on vacation when we're together.",
+            "The kindness you have for everyone is inspiring.",
+            "Oh, your smile - it's killer!",
+            "I am lucky that friendship is for free. Or else, I would have never been able to afford you.",
+            "Your fragrance is simply irresistible.",
+            "I value your opinion. You make keen observations.",
+            "I have the best fun when I'm with you.",
+            "You always bring brightness along with you, and that's what I love about you.",
+            "Your work is beyond impressive.",
+            "I'm sorry that I got so delayed in meeting a person like you.",
+            "I like you because you know exactly what you want from your life.",
+            "You are a brave heart who is never hesitant to meet challenges.",
+            "You are such an incredible problem-solver.",
+            "Your beautiful eyes sparkle like jewels.",
+            "Your confidence is outstanding.",
+            "I love the way you take care of me, you selfless beauty.",
+            "You have a heart of gold.",
+            "I am so glad that I asked you to marry me.",
+            "Your smile is so beautiful that it attracts everybody.",
+            "You really know what you want and fearlessly go for it.",
+            "You make me want to be a better version of myself every day.",
+            "I'm a big fan of the way you impress everybody.",
+            "Even after several years, I still fall in love with you every single day.",
+            "You are gorgeous and confident.",
+            "Your elegance cannot be missed.",
+            "You are like a dazzling diamond that I will treasure forever.",
+            "Thanks for making my life worth living.",
+            "Thank you for being such an amazing life partner who has never stopped loving and appreciating me.",
+            "What's the secret to your extraordinary style?",
+            "Your loveliness is just amazing.",
+            "With you one look, the dark clouds roll away and the birds start singing.",
+            "Everyone loves you, and there are a hundred reasons why.",
+            "Everything about you is worth knowing.",
+            "There's really no need for you to wear makeup. You are the epitome of natural beauty.",
+            "You are the spark that ignites me.",
+            "I'm drawn to your warmth and intelligence.",
+            "It's lovely that you lead a life of simple living and high thinking.",
+            "You make life so worth living.",
+            "Your voice is so mesmerizing.",
+            "Your humility and grace cannot go unnoticed.",
+            "The sight of you in that dress is stunning.",
+            "I must be kissing an angel because nothing else can make me feel so good.",
+            "I find you sexy, attractive, and impactful.",
+            "I love your carefree attitude.",
+            "How do you manage to look this pretty all the time?",
+            "I could listen to your heartwarming stories for the rest of my life.",
+            "I cannot believe how this much beauty can exist in one person.",
+            "You always brighten up any room you are in.",
+            "Your smile makes me weak.",
+            "I can't take my eyes off the beauty you radiate with that sparkling smile.",
+            "I want to be as mentally potent as you are.",
+            "Holding you is the best cure for anything.",
+            "Do you know how attractive you look to me?",
+            "Your laugh is contagious.",
+            "Your kisses are like mellow raindrops on a drought land.",
+            "If someone wrote a book about you, it would be a bestseller.",
+            "I'd rather spend time with you than anyone else.",
+            "I admire the way you are ready to sacrifice everything for your family's happiness.",
+            "I love your sassiness.",
+            "You are like sunshine on a cloudy day.",
+            "When I focus on you, all my pains are gone.",
+            "You put a lot of effort into caring for others. You are worth admiring.",
+            "You are limited edition.",
+            "I am so grateful that we met.",
+            "'Breathtaking' is not enough of a word for you. You are way beyond.",
+            "You always know how to put your best foot forward.",
+            "I love how you make ordinary events worth remembering.",
+            "If I had to make a choice between my FIFA and you, I would certainly go for you."
+        ];
+
+        // Function to generate a random compliment
+        function generateCompliment() {
+            var complimentElement = document.getElementById("compliment");
+            var randomIndex = Math.floor(Math.random() * compliments.length);
+            var compliment = compliments[randomIndex];
+            complimentElement.innerHTML = `<div class="heart">❤️</div><br><br><em>${compliment}</em>`;
+        }</script>
+</body>
+</html>
